@@ -60,8 +60,9 @@ def decide_key(key):
 
     elif name == '9':
         btnClick('9')
-        
-    elif name == '0'
+
+    elif name == '0':
+        btnClick('0')
 
     elif name == '.':
         btnClick('.')
@@ -72,7 +73,7 @@ def decide_key(key):
     else:
         import winsound
         winsound.PlaySound("wan.wav",0)
-        
+
 
 if __name__ == '__main__':
     app = Tk()
@@ -83,7 +84,7 @@ if __name__ == '__main__':
     keyboard.on_press(decide_key)
     text_Input = StringVar()
 
-    txtDisplay = Label(app, font=("arial", 30, "bold"), textvariable=text_Input, bd=30, relief="sunken", width=15,bg="yellow", anchor="e")
+    txtDisplay = Label(app, font=("arial", 30, "bold"), textvariable=text_Input, bd=30, relief="sunken", width=15,bg="yellow", anchor='e')
     txtDisplay.grid(row=0, column=0, columnspan=4)
 
     b7 = Button(app, padx=16, pady=16, bd=9, fg="black", font=("arial", 30, "bold"), text="7", command=lambda: btnClick(7))
@@ -128,6 +129,3 @@ if __name__ == '__main__':
     decimal.grid(row=5, column=0, columnspan=4)
 
     app.mainloop()
-
-
-
